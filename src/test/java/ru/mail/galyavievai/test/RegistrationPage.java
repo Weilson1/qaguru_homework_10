@@ -119,6 +119,20 @@ public class RegistrationPage {
         return this;
     }
 
+    @Step("Кликаем Submit")
+    public RegistrationPage clickSubmit() {
+        $("#submit").click();
+
+        return this;
+    }
+
+    @Step("Проверяем открылась ли форма с данными")
+    public RegistrationPage checkForm () {
+        $(byText("Thanks for submitting the form")).shouldHave(text("Thanks for submitting the form"));
+
+        return this;
+    }
+
     @Step("Выбираем город проживания")
     public RegistrationPage inputCity(String value) {
         $("#city").click();
