@@ -16,9 +16,7 @@ public class TestBase {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
 
         Configuration.baseUrl = "https://demoqa.com";
-        Configuration.browser = System.getProperty("browser", "chrome");
-        Configuration.browserVersion = System.getProperty("version", "91");
-        Configuration.browserSize = System.getProperty("size", "1920x1080");
+        Configuration.browserSize = "1920x1080";
         String url = System.getProperty("url");
         String login = System.getProperty("login");
         String password = System.getProperty("password");
