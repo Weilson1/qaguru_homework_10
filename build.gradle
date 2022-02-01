@@ -38,7 +38,7 @@ dependencies {
 
 tasks.withType(Test) {
     useJUnitPlatform()
-    systemProperties(System.getProperties())
+    systemProperties(System.getProperties()) // Для Jenkins
 
     testLogging {
         lifecycle {
@@ -52,5 +52,5 @@ tasks.withType(Test) {
 task properties_tests(type: Test){
     useJUnitPlatform{
         includeTags "properties"
-    }
+    }       // Для Jenkins
 }
